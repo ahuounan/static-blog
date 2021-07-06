@@ -12,7 +12,7 @@ interface Props {
 export function PageLayout(props: Props) {
   const { children, header, title } = props;
   return (
-    <div className="container mx-auto px-2 md:px-5 lg:px-12 xl:px-24 min-h-screen flex flex-col dark:bg-gray-800">
+    <div className="container mx-auto px-2 md:px-5 lg:px-12 xl:px-24 min-h-screen flex flex-col bg-gray-50 dark:bg-gray-800">
       <Head title={title} />
       <header className="relative container mx-auto flex justify-between mt-1 md:mt-3">
         <Logo />

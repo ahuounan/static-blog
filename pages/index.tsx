@@ -12,7 +12,7 @@ export default function Home() {
         <>
           <figure
             role="figure"
-            className="relative h-3/6 w-3/6 md:h-2/6 md:w-2/6">
+            className="relative h-3/6 w-3/6 md:h-2/6 md:w-2/6 shadow-sm rounded-full">
             <Image
               unoptimized
               src={profile2}

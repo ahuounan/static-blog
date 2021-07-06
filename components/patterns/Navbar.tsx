@@ -22,10 +22,10 @@ export function Navbar() {
   return (
     <nav className="inline-flex print:hidden">
       <ul className="inline-flex justify-between">
-        {navbarItems.map(item => (
+        {navbarItems.map((item, i) => (
           <li
             key={item.href}
-            className={`text-lg md:text-xl px-0 last:-mr-0 md:px-2 md:last:-mr-2 inline-flex items-center justify-center ${
+            className={`text-lg md:text-xl px-0 last:-mr-1 md:px-2 md:last:-mr-4 inline-flex items-center justify-center ${
               router.route === item.href ? 'underline' : ''
             }`}>
             <Link href={item.href}>
