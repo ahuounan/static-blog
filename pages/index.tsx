@@ -17,8 +17,8 @@ export default function Home() {
               unoptimized
               src={profile2}
               alt="Bust shot of Alan, looking sharp"
-              objectFit="cover"
-              objectPosition="center"
+              priority
+              placeholder="blur"
               className="rounded-full h-full w-full"
             />
           </figure>
