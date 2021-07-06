@@ -35,7 +35,7 @@ export function ResumeContent() {
 const experienceItems: ResumeItem[] = [
   {
     title: 'JP Morgan, London, UK',
-    date: 'November 2020 - Present',
+    date: 'November\u00A02020 - Present',
     subtitle: 'Frontend Engineer',
     link: '/projects#JP Morgan',
     bullets: [
@@ -46,7 +46,7 @@ const experienceItems: ResumeItem[] = [
   },
   {
     title: 'Endeavor Streaming, London, UK',
-    date: 'June 2019 - November 2020',
+    date: 'June\u00A02019 - November\u00A02020',
     subtitle: 'Frontend Engineer',
     link: '/projects#Endeavor Streaming',
     bullets: [
@@ -56,7 +56,7 @@ const experienceItems: ResumeItem[] = [
   },
   {
     title: 'Greenpeace, Beijing, China',
-    date: 'April 2018 - October 2018',
+    date: 'April\u00A02018 - October\u00A02018',
     subtitle: 'Data Analyst',
     bullets: [
       'Built Python webcrawler tool to scrape data from Chinese state-owned enterprise websites',
@@ -66,7 +66,7 @@ const experienceItems: ResumeItem[] = [
   },
   {
     title: 'Bloomberg LP, Beijing, China',
-    date: 'October 2015 - March 2018',
+    date: 'October\u00A02015 - March\u00A02018',
     subtitle: 'Sales and Analytics',
     bullets: [
       'Advocated Bloomberg API products, helping clients integrate their models with Bloomberg data',
@@ -76,7 +76,7 @@ const experienceItems: ResumeItem[] = [
   },
   {
     title: 'FMV Opinions, Irvine, California',
-    date: 'June 2013 - June 2015',
+    date: 'June\u00A02013 - June\u00A02015',
     subtitle: 'Associate',
     bullets: [
       'Maintained Excel models for valuation of closed-end funds',
@@ -88,13 +88,13 @@ const experienceItems: ResumeItem[] = [
 const educationItems: ResumeItem[] = [
   {
     title: 'Stanford University, Online',
-    date: 'June 2020 - Present',
+    date: 'June\u00A02020 - Present',
     link: 'https://online.stanford.edu/programs/foundations-computer-science-graduate-program',
     subtitle: 'Foundations of Computer Science, in progress'
   },
   {
     title: 'Claremont McKenna College, California, USA',
-    date: 'August 2009 - May 2013',
+    date: 'August\u00A02009 - May\u00A02013',
     link: 'https://www.cmc.edu/',
     subtitle:
       'Dual Major in Econ-Accounting and Environment, Economics, and Politics (EEP)',
@@ -102,7 +102,7 @@ const educationItems: ResumeItem[] = [
   },
   {
     title: 'International School of Beijing, Beijing, China',
-    date: 'August 2005 - May 2009',
+    date: 'August\u00A02005 - May\u00A02009',
     link: 'https://www.isb.bj.edu.cn/',
     subtitle: 'International Baccalaureate',
     bullets: ['GPA: 3.5/4.0', 'SAT: 2130']
