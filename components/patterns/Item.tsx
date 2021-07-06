@@ -15,7 +15,9 @@ export function Item(props: Props) {
       <div className="flex justify-between items-baseline">
         {link ? (
           <Link href={link}>
-            <a target={isExternal(link) ? '_blank' : undefined}>
+            <a
+              className="link"
+              target={isExternal(link) ? '_blank' : undefined}>
               <h4 className="text-base md:text-lg">{title}</h4>
             </a>
           </Link>
@@ -23,7 +25,7 @@ export function Item(props: Props) {
           <h4 className="text-base md:text-lg">{title}</h4>
         )}
         {date && (
-          <span className="ml-3 text-right">
+          <span className="ml-3 text-sm md:text-base text-right">
             <p>{date}</p>
           </span>
         )}

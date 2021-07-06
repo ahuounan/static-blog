@@ -16,7 +16,7 @@ export function ProjectItem(props: Props) {
     <Item
       title={
         <Link href={link}>
-          <a>
+          <a className="link">
             {title}
             {subtitle && <i> - {subtitle}</i>}
           </a>
@@ -27,7 +27,7 @@ export function ProjectItem(props: Props) {
         <span>{` `}</span>
         <span>
           <Link href={link}>
-            <a className="pl-1">Read more...</a>
+            <a className="pl-1 link">Read more...</a>
           </Link>
         </span>
       </p>

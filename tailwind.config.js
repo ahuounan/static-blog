@@ -21,7 +21,9 @@ module.exports = {
   },
   variants: {
     extend: {
-      margin: ['last']
+      margin: ['last'],
+      boxShadow: ['active'],
+      borderColor: ['active']
     }
   },
   plugins: []

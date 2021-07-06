@@ -4,73 +4,37 @@ import emailIcon from 'public/icons/email.png';
 import linkedInIcon from 'public/icons/linkedIn.png';
 import githubIcon from 'public/icons/github.png';
 import huIcon from 'public/manifest/android-icon-192x192.png';
+import { isExternal } from 'libs/url';
 
 export function Footer() {
   return (
     <div className="my-5">
       <ul className="flex justify-center">
-        <li className="inline-block">
-          <a
-            className="hover:bg-gray-100 p-0 m-0 h-8 w-8 flex items-center justify-center"
-            href="mailto:on.alanhu@gmail.com"
-            target="_blank"
-            rel="noreferrer">
-            <Image
-              unoptimized
-              role="link"
-              src={emailIcon}
-              height={25}
-              width={25}
-              layout="intrinsic"
-              objectFit="contain"
-              objectPosition="center"
-              alt="Email"
-              className="dark-img"
-            />
-          </a>
-        </li>
-        <li className="inline-block ml-3">
-          <a
-            className="hover:bg-gray-100 p-1 m-0 h-8 w-8 flex items-center justify-center"
-            href="https://github.com/ahuounan"
-            target="_blank"
-            rel="noreferrer">
-            <Image
-              unoptimized
-              role="link"
-              src={githubIcon}
-              height={25}
-              width={25}
-              layout="intrinsic"
-              objectFit="contain"
-              objectPosition="center"
-              alt="Github"
-              className="dark-img"
-            />
-          </a>
-        </li>
-        <li className="inline-block ml-3">
-          <a
-            className="hover:bg-gray-100 p-0 m-0 h-8 w-8 flex items-center justify-center"
-            href="https://www.linkedin.com/in/ahuounan/"
-            target="_blank"
-            rel="noreferrer">
-            <Image
-              unoptimized
-              role="link"
-              src={linkedInIcon}
-              height={25}
-              width={25}
-              layout="intrinsic"
-              objectFit="contain"
-              objectPosition="center"
-              alt="LinkedIn"
-              className="dark-img"
-            />
-          </a>
-        </li>
+        {footerLinks.map(link => (
+          <li key={link.href} className="inline-block button border-none">
+            <a
+              className="p-0 m-0 h-8 w-8 flex items-center justify-center"
+              href={link.href}
+              {...(isExternal(link.href)
+                ? { target: '_blank', rel: 'noreferrer' }
+                : {})}>
+              <Image
+                unoptimized
+                role="link"
+                src={link.icon}
+                height={25}
+                width={25}
+                layout="intrinsic"
+                objectFit="contain"
+                objectPosition="center"
+                alt={link.alt}
+                className="dark-img"
+              />
+            </a>
+          </li>
+        ))}
       </ul>
-      <p className="text-center flex items-center justify-center my-1">
+      <p className="text-center text-sm text-gray-700 dark:text-gray-300 flex items-center justify-center my-1">
         <span className="ml-1 cursor-default z10 relative">Alan Hu 2021</span>
       </p>
       <div className="relative my-3 flex items-center justify-center">
@@ -89,3 +53,21 @@ export function Footer() {
     </div>
   );
 }
+
+const footerLinks = [
+  {
+    icon: emailIcon,
+    alt: 'Email',
+    href: 'mailto:on.alanhu@gmail.com'
+  },
+  {
+    icon: githubIcon,
+    alt: 'GitHub',
+    href: 'https://github.com/ahuounan'
+  },
+  {
+    icon: linkedInIcon,
+    alt: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/ahuounan/'
+  }
+];

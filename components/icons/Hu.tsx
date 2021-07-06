@@ -1,7 +1,7 @@
 export function Hu(): JSX.Element {
   return (
     <svg
-      className="h-7 w-7 md:h-10 md:w-10 bg-transparent"
+      className="z-10 h-7 w-7 md:h-10 md:w-10 bg-transparent"
       width="419"
       height="419"
       viewBox="0 0 419 419"

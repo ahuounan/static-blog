@@ -12,9 +12,7 @@ body {
 
 a {
   color: inherit;
-  text-decoration: underline;
   position: relative;
-  @apply hover:bg-gray-100 dark:hover:bg-gray-700 px-1 -ml-1 md:px-2 md:-ml-2;
 }
 
 html {
@@ -39,7 +37,12 @@ a {
 }
 
 .button {
-  @apply shadow border border-gray-100 dark:border-gray-400 hover:shadow-inner;
+  @apply rounded mx-1 border border-gray-200 hover:border-gray-100 hover:shadow active:shadow-inner active:border-gray-100 dark:border-gray-500 dark:active:border-gray-400;
+}
+
+.link {
+  @apply hover:bg-gray-100 dark:hover:bg-gray-700 px-1 -ml-1 md:px-2 md:-ml-2;
+  text-decoration: underline;
 }
 
 @media (prefers-color-scheme: dark) {
