@@ -33,16 +33,19 @@ h5,
 li,
 p,
 a {
-  @apply dark:text-gray-300;
+  @apply dark:text-gray-300 subpixel-antialiased;
 }
 
 .button {
   @apply rounded mx-1 border border-gray-200 hover:border-gray-100 hover:shadow active:shadow-inner active:border-gray-100 dark:border-gray-500 dark:active:border-gray-400;
 }
 
+.button-selected {
+  @apply rounded mx-1 border bg-gray-700 text-white hover:border-gray-700 hover:shadow active:shadow-inner active:border-gray-100 dark:border-gray-500 dark:active:border-gray-400 dark:hover:border-gray-400;
+}
+
 .link {
-  @apply hover:bg-gray-100 dark:hover:bg-gray-700 px-1 -ml-1 md:px-2 md:-ml-2;
-  text-decoration: underline;
+  @apply font-bold hover:bg-gray-100 dark:hover:bg-gray-700 px-1 -ml-1 md:px-2 md:-ml-2 visited:text-gray-800 dark:visited:text-gray-500;
 }
 
 @media (prefers-color-scheme: dark) {

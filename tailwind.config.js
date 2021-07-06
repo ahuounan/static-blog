@@ -8,12 +8,12 @@ module.exports = {
       ...colors,
       transparent: 'transparent',
       current: 'currentColor',
-      scarlet: '#f70502'
+      scarlet: {
+        default: '#f70502',
+        dark: '#710706'
+      }
     },
     extend: {
-      backgroundImage: theme => ({
-        stamp: 'url("/android-chrome-192x192.png")'
-      }),
       screens: {
         print: { raw: 'print' }
       }
@@ -22,8 +22,10 @@ module.exports = {
   variants: {
     extend: {
       margin: ['last'],
-      boxShadow: ['active'],
-      borderColor: ['active']
+      boxShadow: ['active', 'dark'],
+      borderColor: ['active'],
+      fontStyle: ['visited'],
+      textColor: ['visited']
     }
   },
   plugins: []

@@ -22,7 +22,7 @@ export default function Home() {
               className="rounded-full h-full w-full"
             />
           </figure>
-          <figcaption className="text-base w-72 self-center ml-3 md:mt-5 lg:mt-24">
+          <figcaption className="text-base w-72 self-center ml-3 md:mt-5 lg:mt-20">
             <p>
               <b>Hi, I&apos;m Alan.</b> I am a software engineer with experience
               building <i>web</i> and <i>mobile apps</i> with <i>React</i> and{' '}

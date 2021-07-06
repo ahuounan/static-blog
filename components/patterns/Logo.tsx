@@ -3,7 +3,7 @@ import { Hu } from 'components/icons/Hu';
 
 export function Logo() {
   return (
-    <div role="banner" className="button border-none">
+    <div role="banner" className="button dark:shadow-none border-none">
       <Link href="/">
         <a className="flex items-center no-underline pl-0">
           <Hu />

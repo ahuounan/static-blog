@@ -6,7 +6,12 @@ export default function RaasArchitecture() {
   return (
     <PageLayout
       title="Risk as a Service - Architecture"
-      header="Risk as a Service - Architecture">
+      header={
+        <>
+          <h2>Risk as a Service</h2>
+          <h1>Architecture</h1>
+        </>
+      }>
       <ArticleContent
         paragraphs={[
           { content: <>test</> },

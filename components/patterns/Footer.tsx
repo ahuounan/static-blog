@@ -34,10 +34,10 @@ export function Footer() {
           </li>
         ))}
       </ul>
-      <p className="text-center text-sm text-gray-700 dark:text-gray-300 flex items-center justify-center my-1">
+      <p className="text-center text-sm text-gray-700 dark:text-gray-300 flex items-center justify-center">
         <span className="ml-1 cursor-default z10 relative">Alan Hu 2021</span>
       </p>
-      <div className="relative my-3 flex items-center justify-center">
+      <div className="relative mt-5 mb-6 flex items-center justify-center">
         <Image
           unoptimized
           role="link"

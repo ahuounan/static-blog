@@ -75,7 +75,7 @@ const experienceItems: ResumeItem[] = [
     ]
   },
   {
-    title: 'FMV Opinions, Irvine, California',
+    title: 'FMV Opinions, California, USA',
     date: 'June\u00A02013 - June\u00A02015',
     subtitle: 'Associate',
     bullets: [
