@@ -25,11 +25,13 @@ export function Navbar() {
         {navbarItems.map(item => (
           <li
             key={item.href}
-            className={`text-lg md:text-xl px-1 last:-mr-1 md:px-3 md:last:-mr-3 inline-flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700 ${
+            className={`text-lg md:text-xl px-0 last:-mr-0 md:px-2 md:last:-mr-2 inline-flex items-center justify-center ${
               router.route === item.href ? 'underline' : ''
             }`}>
             <Link href={item.href}>
-              <a className="ml-0 no-underline">{item.label}</a>
+              <a className="ml-0 no-underline h-full flex items-center">
+                {item.label}
+              </a>
             </Link>
           </li>
         ))}

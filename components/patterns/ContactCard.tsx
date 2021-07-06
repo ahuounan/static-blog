@@ -17,8 +17,8 @@ export function ContactCard(props: Props) {
         inline-flex
         h-36
         w-36
-        border
-        border-black
+        button
+        group
         rounded
         mx-1
         md:mx-5
@@ -26,9 +26,6 @@ export function ContactCard(props: Props) {
         flex-col
         items-center
         justify-center
-        hover:bg-gray-100
-        dark:border-gray-300
-        dark:hover:bg-gray-700
       ">
       <a
         className="
@@ -40,6 +37,8 @@ export function ContactCard(props: Props) {
           w-full
           mx-0
           no-underline
+          bg-transparent
+          hover:bg-transparent
         "
         href={link}
         target="_blank"

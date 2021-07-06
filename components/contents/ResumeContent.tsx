@@ -89,11 +89,13 @@ const educationItems: ResumeItem[] = [
   {
     title: 'Stanford University, Online',
     date: 'June 2020 - Present',
+    link: 'https://online.stanford.edu/programs/foundations-computer-science-graduate-program',
     subtitle: 'Foundations of Computer Science, in progress'
   },
   {
     title: 'Claremont McKenna College, California, USA',
     date: 'August 2009 - May 2013',
+    link: 'https://www.cmc.edu/',
     subtitle:
       'Dual Major in Econ-Accounting and Environment, Economics, and Politics (EEP)',
     bullets: ['GPA: 3.5/4.0', 'GMAT: 700']
@@ -101,6 +103,7 @@ const educationItems: ResumeItem[] = [
   {
     title: 'International School of Beijing, Beijing, China',
     date: 'August 2005 - May 2009',
+    link: 'https://www.isb.bj.edu.cn/',
     subtitle: 'International Baccalaureate',
     bullets: ['GPA: 3.5/4.0', 'SAT: 2130']
   }

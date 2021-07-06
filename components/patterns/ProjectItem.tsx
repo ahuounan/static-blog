@@ -15,17 +15,19 @@ export function ProjectItem(props: Props) {
   return (
     <Item
       title={
-        <>
-          {title}
-          {subtitle && <i> - {subtitle}</i>}
-        </>
+        <Link href={link}>
+          <a>
+            {title}
+            {subtitle && <i> - {subtitle}</i>}
+          </a>
+        </Link>
       }>
       <p className="text-gray-700 dark:text-gray-400">
         <span className="mr-1">{description}</span>
         <span>{` `}</span>
         <span>
           <Link href={link}>
-            <a>Read more...</a>
+            <a className="pl-1">Read more...</a>
           </Link>
         </span>
       </p>

@@ -73,7 +73,7 @@ export function Footer() {
       <p className="text-center flex items-center justify-center my-1">
         <span className="ml-1 cursor-default z10 relative">Alan Hu 2021</span>
       </p>
-      <div className="relative my-2 flex items-center justify-center">
+      <div className="relative my-3 flex items-center justify-center">
         <Image
           unoptimized
           role="link"

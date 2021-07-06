@@ -21,7 +21,7 @@ export function PageLayout(props: Props) {
 
       <main className="container mx-auto flex-grow">
         <article className="container">
-          <h1 className="text-3xl md:text-4xl text-center my-7 md:my-10 cursor-default relative flex flex-col md:flex-row max-h-96 justify-center items-center">
+          <h1 className="text-3xl md:text-4xl text-center my-7 md:my-10 cursor-default relative flex flex-col md:flex-row justify-center items-center">
             {header}
           </h1>
           {children}

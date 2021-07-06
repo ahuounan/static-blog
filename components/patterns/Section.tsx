@@ -11,11 +11,11 @@ interface Props {
 export function Section(props: Props) {
   const { title, children } = props;
   return (
-    <section id={title} className="mt-4">
+    <section id={title ? encodeURI(title) : undefined} className="mt-4">
       {title && (
         <h3 className="text-2xl">
           <Link href={`#${title}`} scroll>
-            <a>
+            <a className="no-underline">
               {title}
               <span className="ml-2">
                 <Image

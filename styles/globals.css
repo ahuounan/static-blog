@@ -38,6 +38,10 @@ a {
   @apply dark:text-gray-300;
 }
 
+.button {
+  @apply shadow border border-gray-100 dark:border-gray-400 hover:shadow-inner;
+}
+
 @media (prefers-color-scheme: dark) {
   .dark-img {
     filter: invert(100%);

@@ -1,3 +1,4 @@
+import { isExternal } from 'libs/url';
 import Link from 'next/link';
 
 interface Props {
@@ -14,7 +15,7 @@ export function Item(props: Props) {
       <div className="flex justify-between items-baseline">
         {link ? (
           <Link href={link}>
-            <a>
+            <a target={isExternal(link) ? '_blank' : undefined}>
               <h4 className="text-base md:text-lg">{title}</h4>
             </a>
           </Link>
