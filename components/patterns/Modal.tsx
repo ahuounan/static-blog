@@ -12,7 +12,7 @@ export function Modal() {
   }, [JSON.stringify(modal), setModal]);
 
   return (
-    <div className="fixed h-screen w-screen top-0 left-0 flex justify-end items-start p-7">
+    <div className="fixed h-screen w-screen top-0 left-0 flex justify-center items-end text-sm md:text-base md:justify-end md:items-start p-7">
       <div
         className={`
           rounded
@@ -21,7 +21,8 @@ export function Modal() {
           bg-white
           relative
           w-48
-          h-12
+          h-10
+          md:h-12
           transform
           origin-center
           transition-all

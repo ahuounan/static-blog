@@ -17,22 +17,30 @@ export function Section(props: Props) {
     e => {
       const path = e.target.getAttribute('href');
       const url = `https://on-alanhu.com${path}`;
-      navigator.clipboard.writeText(url).then(
-        () => {
-          setModal({
-            duration: 2000,
-            message: 'Link copied.',
-            type: 'success'
-          });
-        },
-        () => {
-          setModal({
-            duration: 2000,
-            message: 'Could not copy link.',
-            type: 'error'
-          });
-        }
-      );
+      if (navigator.clipboard) {
+        navigator.clipboard?.writeText(url).then(
+          () => {
+            setModal({
+              duration: 2000,
+              message: 'Link copied.',
+              type: 'success'
+            });
+          },
+          () => {
+            setModal({
+              duration: 2000,
+              message: 'Could not copy link.',
+              type: 'error'
+            });
+          }
+        );
+      } else {
+        setModal({
+          duration: 2000,
+          message: 'Could not copy link.',
+          type: 'error'
+        });
+      }
     },
     [setModal]
   );
