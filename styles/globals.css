@@ -57,7 +57,7 @@ a {
 }
 
 .link {
-  @apply font-bold hover:bg-gray-100 dark:hover:bg-gray-700 px-1 -ml-1 md:px-2 md:-ml-2 visited:text-gray-800 dark:visited:text-gray-500;
+  @apply font-bold hover:bg-gray-100 dark:hover:bg-gray-700 px-1 -ml-1 md:px-2 md:-ml-2;
 }
 
 @media (prefers-color-scheme: dark) {
