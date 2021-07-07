@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import profile2 from 'public/profile2.jpg';
+import profile from 'public/profile.jpg';
 import { PageLayout } from 'components/layouts/PageLayout';
 import { AboutMeContent } from 'components/contents/AboutMeContent';
 
@@ -15,7 +15,7 @@ export default function Home() {
             className="relative h-3/6 w-3/6 md:h-2/6 md:w-2/6 shadow-sm rounded-full">
             <Image
               unoptimized
-              src={profile2}
+              src={profile}
               alt="Bust shot of Alan, looking sharp"
               priority
               className="rounded-full h-full w-full"
