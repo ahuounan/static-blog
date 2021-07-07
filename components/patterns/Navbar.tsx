@@ -7,11 +7,11 @@ const navbarItems = [
     label: 'Home'
   },
   {
-    href: '/resume.html',
+    href: '/resume',
     label: 'Résumé'
   },
   {
-    href: '/projects/index.html',
+    href: '/projects',
     label: 'Projects'
   }
 ];
