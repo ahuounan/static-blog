@@ -37,11 +37,23 @@ a {
 }
 
 .button {
-  @apply rounded mx-1 border border-gray-200 hover:border-gray-100 hover:shadow active:shadow-inner active:border-gray-100 dark:border-gray-500 dark:active:border-gray-400;
+  @apply rounded mx-1 border border-gray-200 hover:border-gray-100 hover:shadow-md active:shadow active:border-gray-100 dark:border-gray-500 dark:active:border-gray-400 dark:hover:shadow-none;
 }
 
 .button-selected {
-  @apply rounded mx-1 border bg-gray-700 text-white hover:border-gray-700 hover:shadow active:shadow-inner active:border-gray-100 dark:border-gray-500 dark:active:border-gray-400 dark:hover:border-gray-400;
+  @apply rounded
+    mx-1
+    border
+    bg-gray-700
+    text-white
+    border-transparent
+    active:border-gray-700
+    hover:shadow-md
+    active:shadow
+    dark:border-gray-400
+    dark:hover:border-gray-300
+    dark:active:border-gray-200
+    dark:hover:shadow-none;
 }
 
 .link {
