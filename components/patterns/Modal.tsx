@@ -32,7 +32,7 @@ export function Modal() {
           flex
           items-center
           z-0
-          ${modal ? 'z-10 scale-100 opacity-100' : 'z-0 scale-90 opacity-0'}
+          ${modal ? 'z-100 scale-100 opacity-100' : 'z-0 scale-90 opacity-0'}
           ${getBorder(modal?.type)}
         `}
         role="alertdialog"
