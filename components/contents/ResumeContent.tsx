@@ -37,7 +37,7 @@ const experienceItems: ResumeItem[] = [
     title: 'JP Morgan, London, UK',
     date: 'November\u00A02020 - Present',
     subtitle: 'Frontend Engineer',
-    link: '/projects#JP Morgan',
+    link: '/projects/index.html#JP Morgan',
     bullets: [
       'Built, maintained, refactored risk-as-a-service React/rxjs application',
       'Built charting tools combining d3 with React and svg',
@@ -48,7 +48,7 @@ const experienceItems: ResumeItem[] = [
     title: 'Endeavor Streaming, London, UK',
     date: 'June\u00A02019 - November\u00A02020',
     subtitle: 'Frontend Engineer',
-    link: '/projects#Endeavor Streaming',
+    link: '/projects/index.html#Endeavor Streaming',
     bullets: [
       'Built, maintained, refactored white-label sports streaming React-Native/redux/sagas mobile application',
       'Debugged Swift/Java codebase'

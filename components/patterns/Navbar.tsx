@@ -7,11 +7,11 @@ const navbarItems = [
     label: 'Home'
   },
   {
-    href: '/resume',
+    href: '/resume.html',
     label: 'Résumé'
   },
   {
-    href: '/projects',
+    href: '/projects/index.html',
     label: 'Projects'
   }
 ];
@@ -25,10 +25,10 @@ export function Navbar() {
         {navbarItems.map((item, i) => (
           <li
             key={item.href}
-            className={`text-base md:text-base px-0 last:-mr-1 md:px-2 md:last:-mr-4 inline-flex items-center justify-center button px-1 ${
+            className={`text-base md:text-base px-0 last:-mr-1 md:px-2 md:last:-mr-4 inline-flex items-center justify-center px-1 ${
               router.route === item.href ? 'button-selected' : 'button'
             }`}>
-            <Link href={item.href}>
+            <Link href={item.href} as={item.href}>
               <a>{item.label}</a>
             </Link>
           </li>
