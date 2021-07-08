@@ -20,7 +20,10 @@ export function PageLayout(props: Props) {
     <ModalContext.Provider value={{ modal, setModal }}>
       <div className="container mx-auto px-2 md:px-5 lg:px-12 xl:px-24 min-h-screen flex flex-col bg-gray-50 dark:bg-gray-800">
         <Modal />
-        <canvas className="z-0 absolute h-screen w-screen top-0 left-0" />
+        <canvas
+          role="presentation"
+          className="z-0 absolute h-screen w-screen top-0 left-0"
+        />
         <Head title={title} />
         <header className="relative container mx-auto flex justify-between mt-1 md:mt-3">
           <Logo />
