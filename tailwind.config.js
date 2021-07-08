@@ -16,6 +16,9 @@ module.exports = {
     extend: {
       screens: {
         print: { raw: 'print' }
+      },
+      transitionProperty: {
+        modal: 'opacity, transform'
       }
     }
   },

@@ -28,9 +28,6 @@ export function Footer() {
                   src={link.icon}
                   height={25}
                   width={25}
-                  layout="intrinsic"
-                  objectFit="contain"
-                  objectPosition="center"
                   alt={link.alt}
                   className="dark-img"
                 />
@@ -39,18 +36,15 @@ export function Footer() {
           ))}
       </ul>
       <p className="text-center text-sm text-gray-700 dark:text-gray-300 flex items-center justify-center">
-        <span className="ml-1 cursor-default z10 relative">Alan Hu 2021</span>
+        <span className="ml-1 cursor-default">Alan Hu 2021</span>
       </p>
-      <div className="relative mt-5 mb-6 flex items-center justify-center">
+      <div className="mt-5 mb-6 flex items-center justify-center">
         <Image
           unoptimized
           role="link"
           src={huIcon}
           height={20}
           width={20}
-          layout="intrinsic"
-          objectFit="contain"
-          objectPosition="center"
           alt="Hu"
         />
       </div>
