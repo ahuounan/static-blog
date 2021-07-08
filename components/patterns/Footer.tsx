@@ -35,7 +35,7 @@ export function Footer() {
             </li>
           ))}
       </ul>
-      <p className="text-center text-sm text-gray-700 dark:text-gray-300 flex items-center justify-center">
+      <p className="text-center text-sm text-gray-700 dark:text-gray-300 flex items-center justify-center bg-opacity-0.5">
         <span className="ml-1 cursor-default">Alan Hu 2021</span>
       </p>
       <div className="mt-5 mb-6 flex items-center justify-center">

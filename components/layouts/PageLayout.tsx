@@ -4,6 +4,7 @@ import { Navbar } from 'components/patterns/Navbar';
 import { Logo } from 'components/patterns/Logo';
 import { Footer } from 'components/patterns/Footer';
 import { Modal } from 'components/patterns/Modal';
+import { BackgroundCanvas } from 'components/patterns/BackgroundCanvas';
 import { ModalContext } from 'components/contexts/ModalContext';
 
 interface Props {
@@ -18,11 +19,7 @@ export function PageLayout(props: Props) {
 
   return (
     <ModalContext.Provider value={{ modal, setModal }}>
-      <canvas
-        role="presentation"
-        className="fixed z-0 h-screen w-screen inset-0"
-      />
-      <div className="container relative z-0 mx-auto px-2 md:px-5 lg:px-12 xl:px-24 min-h-screen flex flex-col bg-gray-50 dark:bg-gray-800">
+      <div className="container mx-auto px-2 md:px-5 lg:px-12 xl:px-24 min-h-screen flex flex-col bg-transparent">
         <Head title={title} />
         <header className="container mx-auto flex justify-between mt-1 md:mt-3">
           <Logo />
@@ -38,8 +35,9 @@ export function PageLayout(props: Props) {
           </article>
         </main>
 
-        <footer className="container mx-auto print:hidden">
+        <footer className="container mx-auto print:hidden relative">
           <Footer />
+          <BackgroundCanvas />
         </footer>
       </div>
       <Modal />
