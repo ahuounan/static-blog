@@ -16,6 +16,13 @@ module.exports = {
     extend: {
       screens: {
         print: { raw: 'print' }
+      },
+      transitionProperty: {
+        modal: 'opacity, transform'
+      },
+      spacing: {
+        'logo-mobile': '250px',
+        'logo-desktop': '250px'
       }
     }
   },

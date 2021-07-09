@@ -12,33 +12,67 @@ export function Modal() {
   }, [JSON.stringify(modal), setModal]);
 
   return (
-    <div className="fixed h-screen w-screen top-0 left-0 flex justify-center items-end text-sm md:text-base md:justify-end md:items-start p-7">
-      <div
-        className={`
+    <>
+      <ModalBase
+        message={modal?.message}
+        type="error"
+        show={modal?.type === 'error'}
+      />
+      <ModalBase
+        message={modal?.message}
+        type="success"
+        show={modal?.type === 'success'}
+      />
+      <ModalBase
+        message={modal?.message}
+        type="neutral"
+        show={modal?.type === 'neutral'}
+      />
+    </>
+  );
+}
+
+interface BaseProps {
+  type: ModalType;
+  message?: string;
+  show: boolean;
+}
+
+function ModalBase(props: BaseProps) {
+  const { message, type, show } = props;
+
+  return (
+    <div
+      className={`
+          fixed
+          left-2/4
+          right-2/4
+          bottom-10
+          md:top-10
+          md:left-auto
+          md:right-10
           rounded
           p-4
           shadow-md
           bg-white
-          relative
           w-48
           h-10
           md:h-12
           transform
           origin-center
-          transition-all
+          -translate-x-2/4
+          md:translate-none
+          transition-modal
           duration-50
           ease-in-out
           text-sm
           flex
           items-center
-          z-0
-          ${modal ? 'z-100 scale-100 opacity-100' : 'z-0 scale-90 opacity-0'}
-          ${getBorder(modal?.type)}
+          ${show ? 'z-100 scale-100 opacity-100' : 'z-0 scale-90 opacity-0'}
+          ${getBorder(type)}
         `}
-        role="alertdialog"
-        aria-modal="true">
-        {modal?.message ?? ''}
-      </div>
+      role="alert">
+      {message ?? ''}
     </div>
   );
 }

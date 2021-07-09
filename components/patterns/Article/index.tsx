@@ -12,17 +12,16 @@ export function Article(props: Props) {
     <>
       {paragraphs.map((content, i) =>
         isArticleImageContent(content) ? (
-          <figure key={i} className="flex flex-col container relative">
+          <figure key={i} className="flex flex-col container">
             <Image
               unoptimized
-              className="relative"
               src={content.img}
               alt={content.alt}
               layout="intrinsic"
               objectFit="scale-down"
             />
             {content.caption && (
-              <figcaption className="relative text-center text-sm text-gray-800 italic">
+              <figcaption className="text-center text-sm text-gray-800 italic">
                 {content.caption}
               </figcaption>
             )}

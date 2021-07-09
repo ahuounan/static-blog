@@ -15,8 +15,10 @@ export function ContactCard(props: Props) {
       className="
         block
         inline-flex
-        h-36
-        w-36
+        h-28
+        w-28
+        md:h-36
+        md:w-36
         button
         group
         rounded

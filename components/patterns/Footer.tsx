@@ -6,16 +6,25 @@ import githubIcon from 'public/icons/github.png';
 import huIcon from 'public/manifest/android-icon-192x192.png';
 import { isExternal } from 'libs/url';
 import { useRouter } from 'next/router';
+import { BackgroundCanvas } from './BackgroundCanvas';
+import { useRef } from 'react';
 
 export function Footer() {
   const router = useRouter();
+  const showButtons = router.pathname !== '/';
+  const animateRef = useRef<{ animate?: (animate: boolean) => void }>({});
+  const onHuClick = () => {
+    animateRef.current?.animate?.(true);
+  };
 
   return (
-    <div className="my-5">
-      <ul className="flex justify-center">
-        {router.pathname !== '/' &&
-          footerLinks.map(link => (
-            <li key={link.href} className="inline-block button border-none">
+    <div className="z-10 self-stretch">
+      {showButtons && (
+        <ul className="flex justify-center">
+          {footerLinks.map(link => (
+            <li
+              key={link.href}
+              className="inline-block button border-none bg-opacity-90">
               <a
                 className="p-0 m-0 h-8 w-8 flex items-center justify-center"
                 href={link.href}
@@ -26,33 +35,32 @@ export function Footer() {
                   unoptimized
                   role="link"
                   src={link.icon}
-                  height={25}
-                  width={25}
-                  layout="intrinsic"
-                  objectFit="contain"
-                  objectPosition="center"
+                  height={20}
+                  width={20}
                   alt={link.alt}
                   className="dark-img"
                 />
               </a>
             </li>
           ))}
-      </ul>
-      <p className="text-center text-sm text-gray-700 dark:text-gray-300 flex items-center justify-center">
-        <span className="ml-1 cursor-default z10 relative">Alan Hu 2021</span>
-      </p>
-      <div className="relative mt-5 mb-6 flex items-center justify-center">
-        <Image
-          unoptimized
-          role="link"
-          src={huIcon}
-          height={20}
-          width={20}
-          layout="intrinsic"
-          objectFit="contain"
-          objectPosition="center"
-          alt="Hu"
-        />
+        </ul>
+      )}
+      <div className="relative flex items-center self-stretch justify-center">
+        <BackgroundCanvas animateRef={animateRef} />
+        <button
+          onClick={onHuClick}
+          className="logo absolute"
+          style={{ height: 20, width: 20 }}>
+          <Image
+            unoptimized
+            className="bg-white dark:bg-gray-700 bg-opacity-75"
+            role="link"
+            src={huIcon}
+            height={20}
+            width={20}
+            alt="Hu"
+          />
+        </button>
       </div>
     </div>
   );
