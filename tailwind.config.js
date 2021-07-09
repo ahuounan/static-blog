@@ -19,6 +19,10 @@ module.exports = {
       },
       transitionProperty: {
         modal: 'opacity, transform'
+      },
+      spacing: {
+        'logo-mobile': '300px',
+        'logo-desktop': '500px'
       }
     }
   },

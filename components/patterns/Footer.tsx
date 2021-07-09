@@ -35,12 +35,13 @@ export function Footer() {
             </li>
           ))}
       </ul>
-      <p className="text-center text-sm text-gray-700 dark:text-gray-300 flex items-center justify-center bg-opacity-0.5">
+      <p className="relative z-10 text-center text-sm text-gray-700 dark:text-gray-300 flex items-center justify-center bg-opacity-0.5">
         <span className="ml-1 cursor-default">Alan Hu 2021</span>
       </p>
       <div className="mt-5 mb-6 flex items-center justify-center">
         <Image
           unoptimized
+          className="md:bg-white bg-opacity-75"
           role="link"
           src={huIcon}
           height={20}

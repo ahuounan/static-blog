@@ -26,7 +26,7 @@ export function PageLayout(props: Props) {
           <Navbar />
         </header>
 
-        <main className="container mx-auto flex-grow">
+        <main className="container mx-auto flex-1">
           <article className="container">
             <h1 className="text-3xl md:text-4xl text-center my-7 md:my-10 cursor-default flex flex-col md:flex-row justify-center items-center">
               {header}
@@ -35,7 +35,7 @@ export function PageLayout(props: Props) {
           </article>
         </main>
 
-        <footer className="container mx-auto print:hidden relative">
+        <footer className="container mx-auto print:hidden relative my-10 md:my-20 flex-1 flex justify-center items-center">
           <Footer />
           <BackgroundCanvas />
         </footer>

@@ -4,6 +4,7 @@ const aspectRatio = 16 / 9;
 
 export function BackgroundCanvas() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const hasRun = useRef<boolean>(false);
   const { width, height } = useDimensions(containerRef);
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -11,9 +12,10 @@ export function BackgroundCanvas() {
     const handle = setTimeout(() => {
       if (canvasRef.current && height && width) {
         const ctx = canvasRef.current.getContext('2d');
-        draw(ctx, width, (width ?? 0) / aspectRatio);
+        draw(ctx, width, (width ?? 0) / aspectRatio, !hasRun.current);
+        hasRun.current = true;
       }
-    }, 250);
+    }, 3000);
 
     return () => clearTimeout(handle);
   }, [canvasRef, height, width]);
@@ -22,7 +24,7 @@ export function BackgroundCanvas() {
     <div
       key="background-canvas-container"
       ref={containerRef}
-      className="absolute h-full w-full inset-0 flex items-center overflow-visible">
+      className="absolute z-0 w-logo-mobile md:w-logo-desktop inset-0 mx-auto text-center flex items-center overflow-visible">
       <canvas
         key="background-canvas overflow-visible"
         ref={canvasRef}
@@ -59,13 +61,14 @@ function useDimensions(ref: RefObject<HTMLElement>) {
 function draw(
   ctx: CanvasRenderingContext2D | null,
   width: number,
-  height: number
+  height: number,
+  animate: boolean
 ) {
   if (!ctx) {
     return;
   }
   ctx.clearRect(0, 0, width, height);
-  const pointsRight = blueprintFn([0.63, 0.525], 0.05);
+  const pointsRight = blueprintFn([0.63, 0.45], 0.05);
   pointsRight.forEach((coord, i) => {
     let current: [number, number] = [width * coord[0], height * coord[1]];
     const nextCoord = pointsRight[i + 1];
@@ -81,7 +84,7 @@ function draw(
     ];
     line(ctx, current, steps, n);
   });
-  const pointsLeft = blueprintFn([0.37, 0.525], 0.05);
+  const pointsLeft = blueprintFn([0.37, 0.45], 0.05);
   pointsLeft.forEach((coord, i) => {
     let current: [number, number] = [width * coord[0], height * coord[1]];
     const nextCoord = pointsLeft[i + 1];
@@ -90,7 +93,7 @@ function draw(
       return;
     }
     let next: [number, number] = [width * nextCoord[0], height * nextCoord[1]];
-    const n = 100;
+    const n = animate ? 100 : 1;
     const steps: [number, number] = [
       (next[0] - current[0]) / n,
       (next[1] - current[1]) / n

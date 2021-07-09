@@ -59,6 +59,10 @@ a {
   @apply font-bold hover:bg-gray-100 dark:hover:bg-gray-700 px-1 -ml-1 md:px-2 md:-ml-2;
 }
 
+.logo {
+  @apply dark:border-transparent dark:shadow-none dark:hover:border-transparent dark:active:border-transparent;
+}
+
 @media (prefers-color-scheme: dark) {
   .dark-img {
     filter: invert(100%);
