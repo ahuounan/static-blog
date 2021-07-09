@@ -1,30 +1,52 @@
-import { RefObject, useEffect, useRef, useState } from 'react';
+import {
+  MutableRefObject,
+  RefObject,
+  useCallback,
+  useEffect,
+  useRef,
+  useState
+} from 'react';
 
 const aspectRatio = 16 / 9;
 
-export function BackgroundCanvas() {
+interface Props {
+  animateRef: MutableRefObject<{ animate?: (animate: boolean) => void }>;
+}
+
+export function BackgroundCanvas(props: Props) {
+  const { animateRef } = props;
   const containerRef = useRef<HTMLDivElement>(null);
   const hasRun = useRef<boolean>(false);
   const { width, height } = useDimensions(containerRef);
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  useEffect(() => {
-    const handle = setTimeout(() => {
+
+  const animate = useCallback(
+    (animate: boolean) => {
       if (canvasRef.current && height && width) {
         const ctx = canvasRef.current.getContext('2d');
-        draw(ctx, width, (width ?? 0) / aspectRatio, !hasRun.current);
-        hasRun.current = true;
+        draw(ctx, width, (width ?? 0) / aspectRatio, animate);
       }
-    }, 3000);
+    },
+    [canvasRef, height, width]
+  );
 
+  if (animateRef && animateRef.current) {
+    animateRef.current.animate = animate;
+  }
+  useEffect(() => {
+    const handle = setTimeout(() => {
+      animate(!hasRun.current);
+      hasRun.current = true;
+    }, 1500);
     return () => clearTimeout(handle);
-  }, [canvasRef, height, width]);
+  }, [animate]);
 
   return (
     <div
       key="background-canvas-container"
       ref={containerRef}
-      className="absolute z-0 w-logo-mobile md:w-logo-desktop inset-0 mx-auto text-center flex items-center overflow-visible">
+      className="relative z-0 w-logo-mobile md:w-logo-desktop inset-0 mx-auto text-center flex items-center overflow-visible">
       <canvas
         key="background-canvas overflow-visible"
         ref={canvasRef}
@@ -68,37 +90,37 @@ function draw(
     return;
   }
   ctx.clearRect(0, 0, width, height);
-  const pointsRight = blueprintFn([0.63, 0.45], 0.05);
-  pointsRight.forEach((coord, i) => {
+  const gap = 0.13;
+  const y = 0.5;
+  const size = 0.05;
+  const frames = animate ? 75 : 1;
+  pattern(ctx, 0.5 + gap, y, size, frames, width, height);
+  pattern(ctx, 0.5 - gap, y, size, frames, width, height);
+}
+
+function pattern(
+  ctx: CanvasRenderingContext2D,
+  x: number,
+  y: number,
+  size: number,
+  frames: number,
+  width: number,
+  height: number
+) {
+  const points = blueprintFn([x, y], size);
+  points.forEach((coord, i) => {
     let current: [number, number] = [width * coord[0], height * coord[1]];
-    const nextCoord = pointsRight[i + 1];
+    const nextCoord = points[i + 1];
 
     if (!nextCoord) {
       return;
     }
     let next: [number, number] = [width * nextCoord[0], height * nextCoord[1]];
-    const n = 100;
     const steps: [number, number] = [
-      (next[0] - current[0]) / n,
-      (next[1] - current[1]) / n
+      (next[0] - current[0]) / frames,
+      (next[1] - current[1]) / frames
     ];
-    line(ctx, current, steps, n);
-  });
-  const pointsLeft = blueprintFn([0.37, 0.45], 0.05);
-  pointsLeft.forEach((coord, i) => {
-    let current: [number, number] = [width * coord[0], height * coord[1]];
-    const nextCoord = pointsLeft[i + 1];
-
-    if (!nextCoord) {
-      return;
-    }
-    let next: [number, number] = [width * nextCoord[0], height * nextCoord[1]];
-    const n = animate ? 100 : 1;
-    const steps: [number, number] = [
-      (next[0] - current[0]) / n,
-      (next[1] - current[1]) / n
-    ];
-    line(ctx, current, steps, n);
+    line(ctx, current, steps, frames);
   });
 }
 

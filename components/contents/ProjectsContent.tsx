@@ -35,6 +35,11 @@ export function ProjectsContent() {
           subtitle="Building a Charting Toolbox"
           link="/projects/raas-architecture"
         />
+        <ProjectItem
+          title="Risk as a Service"
+          subtitle="Wrestling with AgGrid"
+          link="/projects/raas-architecture"
+        />
       </Section>
       <Section title="Endeavor Streaming">
         <ProjectItem

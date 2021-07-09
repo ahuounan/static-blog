@@ -4,7 +4,6 @@ import { Navbar } from 'components/patterns/Navbar';
 import { Logo } from 'components/patterns/Logo';
 import { Footer } from 'components/patterns/Footer';
 import { Modal } from 'components/patterns/Modal';
-import { BackgroundCanvas } from 'components/patterns/BackgroundCanvas';
 import { ModalContext } from 'components/contexts/ModalContext';
 
 interface Props {
@@ -35,9 +34,8 @@ export function PageLayout(props: Props) {
           </article>
         </main>
 
-        <footer className="container mx-auto print:hidden relative my-10 md:my-20 flex-1 flex justify-center items-center">
+        <footer className="container mx-auto print:hidden relative md:mt-5 mt-3 flex flex-col items-end justify-end">
           <Footer />
-          <BackgroundCanvas />
         </footer>
       </div>
       <Modal />
