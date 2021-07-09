@@ -11,11 +11,13 @@ export function Footer() {
   const router = useRouter();
 
   return (
-    <div className="my-5">
+    <div className="my-5 relative z-10">
       <ul className="flex justify-center">
         {router.pathname !== '/' &&
           footerLinks.map(link => (
-            <li key={link.href} className="inline-block button border-none">
+            <li
+              key={link.href}
+              className="inline-block button border-none bg-opacity-90">
               <a
                 className="p-0 m-0 h-8 w-8 flex items-center justify-center"
                 href={link.href}
