@@ -46,9 +46,9 @@ export function Section(props: Props) {
   );
 
   return (
-    <section id={title ? encodeURI(title) : undefined} className="mt-4">
+    <section id={title ? encodeURI(title) : undefined} className="my-4">
       {title && (
-        <h3 className="text-2xl">
+        <h3 className="text-2xl my-1">
           <Link href={`#${title}`} scroll>
             <a onClick={onClick}>
               {title}

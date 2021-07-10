@@ -11,7 +11,7 @@ interface Props {
 export function Item(props: Props) {
   const { title, link, date, children } = props;
   return (
-    <div className="container pl-3 md:pl-6">
+    <div className="container pl-3 md:pl-6 my-1">
       <div className="flex justify-between items-baseline">
         {link ? (
           <Link href={link}>

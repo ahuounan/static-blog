@@ -23,11 +23,13 @@ export default function Home() {
           </figure>
           <figcaption className="text-base w-72 self-center ml-3 md:mt-5 lg:mt-20">
             <p>
-              <b>Hi, I&apos;m Alan.</b> I am a software engineer with experience
-              building <i>web</i> and <i>mobile apps</i> with <i>React</i> and{' '}
-              <i>React Native</i>.
+              <b>Hi, I&apos;m Alan.</b>
             </p>
-            <p className="mt-1">
+            <p className="my-2">
+              I am a software engineer with experience building <i>web</i> and{' '}
+              <i>mobile apps</i> with <i>React</i> and <i>React Native</i>.
+            </p>
+            <p>
               I spend my free time learning things, 3d-printing and gardening.
             </p>
           </figcaption>
