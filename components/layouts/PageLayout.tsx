@@ -34,11 +34,11 @@ export function PageLayout(props: Props) {
           </article>
         </main>
 
-        <footer className="container mx-auto print:hidden relative md:mt-5 mt-3 flex flex-col items-end justify-end">
+        <footer className="container mx-auto print:hidden relative md:mt-5 mt-3 flex flex-col items-end justify-end z-0">
           <Footer />
         </footer>
+        <Modal />
       </div>
-      <Modal />
     </ModalContext.Provider>
   );
 }
