@@ -18,7 +18,7 @@ export default function Home() {
               src={profile}
               alt="Bust shot of Alan, looking sharp"
               priority
-              className="rounded-full h-full w-full"
+              className="rounded-full"
             />
           </figure>
           <figcaption className="text-base w-72 self-center ml-3 md:mt-5 lg:mt-20">
