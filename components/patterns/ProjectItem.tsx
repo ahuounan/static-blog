@@ -5,7 +5,7 @@ import { Item } from './Item';
 interface Props {
   title: string;
   subtitle?: string;
-  description?: string;
+  description?: React.ReactNode;
   link: string;
 }
 
