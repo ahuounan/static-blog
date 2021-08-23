@@ -8,7 +8,7 @@ export function ProjectsContent() {
         <ProjectItem
           title="Map Viewer"
           description={
-            <p>
+            <p className="text-gray-700 dark:text-gray-400">
               A small project using mapbox-gl/visx to render map data and
               related charts. Deployed{' '}
               <a
