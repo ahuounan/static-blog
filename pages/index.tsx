@@ -16,7 +16,7 @@ export default function Home() {
             <Image
               unoptimized
               src={profile}
-              alt="Bust shot of Alan, looking sharp"
+              alt="Alan"
               priority
               className="rounded-full"
             />
