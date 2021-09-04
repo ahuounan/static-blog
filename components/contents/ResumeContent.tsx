@@ -88,9 +88,15 @@ const experienceItems: ResumeItem[] = [
 const educationItems: ResumeItem[] = [
   {
     title: 'Stanford University, Online',
-    date: 'June\u00A02020 - Present',
+    date: 'June\u00A02020 - August\u00A02020',
     link: 'https://online.stanford.edu/programs/foundations-computer-science-graduate-program',
-    subtitle: 'Foundations of Computer Science, in progress'
+    subtitle: 'Foundations of Computer Science Graduate Certificate'
+  },
+  {
+    title: 'Codeworks',
+    date: 'January\u00A02019 - April\u00A02019',
+    link: 'https://codeworks.me/barcelona/software-engineering-immersive-course/',
+    subtitle: 'Fullstack web development bootcamp'
   },
   {
     title: 'Claremont McKenna College, California, USA',
