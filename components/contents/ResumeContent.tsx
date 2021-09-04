@@ -93,7 +93,7 @@ const educationItems: ResumeItem[] = [
     subtitle: 'Foundations of Computer Science Graduate Certificate'
   },
   {
-    title: 'Codeworks',
+    title: 'Codeworks, Barcelona, Spain',
     date: 'January\u00A02019 - April\u00A02019',
     link: 'https://codeworks.me/barcelona/software-engineering-immersive-course/',
     subtitle: 'Fullstack web development bootcamp'
