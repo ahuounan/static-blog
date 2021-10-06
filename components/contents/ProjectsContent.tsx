@@ -17,8 +17,8 @@ export function ProjectsContent() {
                 href="https://on-alanhu.com/map-viewer/"
                 rel="noreferrer">
                 here.
-              </a>
-              . Password is &quot;maple2021&quot;
+              </a>{' '}
+              Password is &quot;maple2021&quot;
             </p>
           }
           link="https://github.com/ahuounan/map-viewer-ui"
