@@ -14,10 +14,11 @@ export function ProjectsContent() {
               <a
                 className="pl-1 link"
                 target="_blank"
-                href="http://map-viewer.on-alanhu.com"
+                href="https://on-alanhu.com/map-viewer/"
                 rel="noreferrer">
                 here.
               </a>
+              . Password is "maple2021"
             </p>
           }
           link="https://github.com/ahuounan/map-viewer-ui"
