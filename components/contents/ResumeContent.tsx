@@ -34,14 +34,29 @@ export function ResumeContent() {
 
 const experienceItems: ResumeItem[] = [
   {
+    title: 'Humaans, London, UK',
+    date: 'October\u00A02021 - Present',
+    subtitle: 'Fullstack Engineer',
+    bullets: [
+      'Languages: Javascript, Rescript',
+      'Frontend stack: React, custom state management libraries',
+      'Backend stack: Node, Express, Feathers',
+      'Database: Postgres',
+      'Built, maintained, refactored HRIS fullstack application',
+      'Contributed major UI features, webhook integrations, server jobs, and more'
+    ]
+  },
+  {
     title: 'JP Morgan, London, UK',
-    date: 'November\u00A02020 - Present',
+    date: 'November\u00A02020 - October\u00A02021',
     subtitle: 'Frontend Engineer',
     link: '/projects#JP Morgan',
     bullets: [
-      'Built, maintained, refactored risk-as-a-service React/rxjs application',
-      'Built charting tools combining d3 with React and svg',
-      'Debugged python backend codebase'
+      'Language: Typescript, Python',
+      'Stack: React, rxjs',
+      'Built, maintained, refactored risk-as-a-service web application',
+      'Contributed major UI features, and reusable charting tools combining d3 with React and svg',
+      'Debugged Python backend codebase'
     ]
   },
   {
@@ -50,8 +65,10 @@ const experienceItems: ResumeItem[] = [
     subtitle: 'Frontend Engineer',
     link: '/projects#Endeavor Streaming',
     bullets: [
-      'Built, maintained, refactored white-label sports streaming React-Native/redux/sagas mobile application',
-      'Debugged Swift/Java codebase'
+      'Languages: Typescript, Swift, Java, Objective-C',
+      'Stack: React-Native, Redux, redux-saga',
+      'Built, maintained, refactored white-label sports video streaming mobile application',
+      'Debugged, maintained Swift/Java native modules'
     ]
   },
   {
