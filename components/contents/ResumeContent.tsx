@@ -115,13 +115,28 @@ const educationItems: ResumeItem[] = [
     date: 'June\u00A02020 - August\u00A02021',
     link: 'https://online.stanford.edu/programs/foundations-computer-science-graduate-program',
     subtitle: 'Graduate Certificate in Foundations of Computer Science',
-    bullets: ['GPA: 3.8/4.0', 'Languages: C, C++, Python']
+    bullets: [
+      'GPA: 3.8/4.0',
+      'Languages: C, C++, Python',
+      'Topics (programming): heap memory management (malloc, realloc, free), assembly language (x86-64), C types, bitwise operations, arrays, pointers, generics, and more',
+      'Topics (computer systems): file systems (Linux v6), multiprocessing (fork/exec), threading/concurrency (locks/semaphores), networking, and more',
+      'Topics (math): formal logic, graph theory, automata theory, complexity theory, and more',
+      'Topics (probability): MLE, MAP, naïve Bayes, logistic regression, and more',
+      'Topics (algorithms): asymptotics, recurrences, randomized algos, BSTs, hashing, graphs, dynamic programming, and more'
+    ]
   },
   {
     title: 'Codeworks, Barcelona, Spain',
     date: 'January\u00A02019 - April\u00A02019',
     link: 'https://codeworks.me/barcelona/software-engineering-immersive-course/',
-    subtitle: 'Fullstack web development bootcamp'
+    subtitle: 'Fullstack web development bootcamp',
+    bullets: [
+      'Language: Javascript (>ES6)',
+      'Frontend frameworks: React, Angular',
+      'Backend frameworks: Express, Koa',
+      'Databases: Postgres, MongoDB',
+      'Other topics: TDD, HTTP, JWT, WebSockets'
+    ]
   },
   {
     title: 'Claremont McKenna College, California, USA',
