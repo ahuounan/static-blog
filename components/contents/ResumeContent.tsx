@@ -73,6 +73,7 @@ const experienceItems: ResumeItem[] = [
       'Languages: Typescript, Swift, Java, Objective-C',
       'Stack: React-Native, Redux, redux-saga',
       'Built, maintained, refactored white-label sports video streaming mobile application',
+      'Contributed major UI features, refactored Chromecast connection state machine, built deep link feature',
       'Debugged, maintained Swift/Java native modules'
     ]
   },
