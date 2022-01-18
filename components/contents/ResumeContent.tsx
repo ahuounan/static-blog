@@ -47,6 +47,7 @@ const experienceItems: ResumeItem[] = [
       'Frontend stack: React, custom state management libraries',
       'Backend stack: Node, Express, Feathers',
       'Database: Postgres',
+      'Deployment: GCP, Kubernetes',
       'Built, maintained, refactored HRIS fullstack application',
       'Contributed major UI features, webhook integrations, server jobs, and more'
     ]
