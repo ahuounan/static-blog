@@ -6,7 +6,7 @@ export function ResumeContent() {
     <>
       <div>
         <p className="text-lg mx-auto text-center hidden print:block">
-          +44 777 645 0399 | on.alanhu@gmail.com | <a href="/">on-alanhu.io</a>
+          +44 777 645 0399 | on.alanhu@gmail.com | on-alanhu.io
         </p>
       </div>
       <Section title="Experience">
