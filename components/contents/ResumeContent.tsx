@@ -4,6 +4,11 @@ import { ResumeItem } from 'components/patterns/ResumeItem';
 export function ResumeContent() {
   return (
     <>
+      <div>
+        <p className="text-lg mx-auto text-center hidden print:block">
+          +44 777 645 0399 | on.alanhu@gmail.com | <a href="/">on-alanhu.io</a>
+        </p>
+      </div>
       <Section title="Experience">
         {experienceItems.map(item => (
           <ResumeItem
@@ -52,7 +57,7 @@ const experienceItems: ResumeItem[] = [
     subtitle: 'Frontend Engineer',
     link: '/projects#JP Morgan',
     bullets: [
-      'Language: Typescript, Python',
+      'Languages: Typescript, Python',
       'Stack: React, rxjs',
       'Built, maintained, refactored risk-as-a-service web application',
       'Contributed major UI features, and reusable charting tools combining d3 with React and svg',
@@ -105,9 +110,10 @@ const experienceItems: ResumeItem[] = [
 const educationItems: ResumeItem[] = [
   {
     title: 'Stanford University, Online',
-    date: 'June\u00A02020 - August\u00A02020',
+    date: 'June\u00A02020 - August\u00A02021',
     link: 'https://online.stanford.edu/programs/foundations-computer-science-graduate-program',
-    subtitle: 'Foundations of Computer Science Graduate Certificate'
+    subtitle: 'Graduate Certificate in Foundations of Computer Science',
+    bullets: ['GPA: 3.8/4.0', 'Languages: C, C++, Python']
   },
   {
     title: 'Codeworks, Barcelona, Spain',
